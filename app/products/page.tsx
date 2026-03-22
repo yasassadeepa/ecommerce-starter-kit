@@ -4,7 +4,8 @@ import { useState } from "react";
 import { ChevronDown, Filter } from "lucide-react";
 import ProductCard from "@/components/ProductCard";
 import { Button } from "@/components/ui/button";
-import { products } from "@/lib/data";
+import { products, categories } from "@/lib/data";
+
 
 export default function ProductsPage() {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -50,22 +51,36 @@ export default function ProductsPage() {
             <div>
               <h3 className="mb-3 text-xs tracking-widest uppercase">Category</h3>
               <div className="space-y-2">
-                {["all", "audio", "wearables", "accessories"].map((category) => (
-                  <label key={category} className="flex items-center">
-                    <input
-                      type="radio"
-                      name="category"
-                      value={category}
-                      checked={selectedCategory === category}
-                      onChange={(e) => setSelectedCategory(e.target.value)}
-                      className="mr-2"
-                    />
-                    <span className="capitalize">
-                      {category === "all" ? "All Products" : category}
-                    </span>
-                  </label>
-                ))}
+                <label className="flex items-center">
+                  <input
+                    type="radio"
+                    name="category"
+                    value="all"
+                    checked={selectedCategory === "all"}
+                    onChange={(e) => setSelectedCategory(e.target.value)}
+                    className="mr-2"
+                  />
+                  <span className="capitalize">All Products</span>
+                </label>
+                {categories.map((category) => {
+
+                  const categoryValue = category.href.split("=")[1];
+                  return (
+                    <label key={categoryValue} className="flex items-center">
+                      <input
+                        type="radio"
+                        name="category"
+                        value={categoryValue}
+                        checked={selectedCategory === categoryValue}
+                        onChange={(e) => setSelectedCategory(e.target.value)}
+                        className="mr-2"
+                      />
+                      <span className="capitalize">{category.name}</span>
+                    </label>
+                  );
+                })}
               </div>
+
             </div>
 
             {/* Price Filter */}

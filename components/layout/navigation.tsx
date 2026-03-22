@@ -13,38 +13,39 @@ import {
   navigationMenuTriggerStyle
 } from "@/components/ui/navigation-menu";
 
-const categories: { title: string; href: string; description: string }[] = [
+const navigationCategories: { title: string; href: string; description: string }[] = [
   {
-    title: "Men",
-    href: "/category/men",
-    description: "Apparel, shoes, and accessories for men."
+    title: "T-shirts",
+    href: "/products?category=tshirts",
+    description: "Classic and graphic cotton tees for everyday wear."
   },
   {
-    title: "Women",
-    href: "/category/women",
-    description: "Stylish and comfortable fashion for women."
+    title: "Hand bags",
+    href: "/products?category=handbags",
+    description: "Stylish tote bags, crossbody bags, and clutches."
   },
   {
-    title: "Kids",
-    href: "/category/kids",
-    description: "Fun and functional outfits for kids of all ages."
+    title: "Caps",
+    href: "/products?category=caps",
+    description: "Baseball caps, beanies, and snapbacks."
   },
   {
-    title: "Home & Living",
-    href: "/category/home",
-    description: "Decor, kitchenware, and lifestyle products."
+    title: "Shoes",
+    href: "/products?category=shoes",
+    description: "Running shoes, loafers, and casual sneakers."
   },
   {
-    title: "Beauty",
-    href: "/category/beauty",
-    description: "Skin care, cosmetics, and grooming essentials."
+    title: "Watches",
+    href: "/products?category=watches",
+    description: "Luxury chronographs and minimalist analog watches."
   },
   {
-    title: "Electronics",
-    href: "/category/electronics",
-    description: "Gadgets, accessories, and smart devices."
+    title: "Sun glasses",
+    href: "/products?category=sunglasses",
+    description: "Classic aviators and modern wayfarer frames."
   }
 ];
+
 
 function ListItem({
   title,
@@ -102,12 +103,13 @@ export default function Navigation() {
           <NavigationMenuTrigger>Categories</NavigationMenuTrigger>
           <NavigationMenuContent>
             <ul className="grid w-[400px] gap-2 md:grid-cols-2 lg:w-[550px]">
-              {categories.map((category) => (
+              {navigationCategories.map((category) => (
                 <ListItem key={category.title} title={category.title} href={category.href}>
                   {category.description}
                 </ListItem>
               ))}
             </ul>
+
           </NavigationMenuContent>
         </NavigationMenuItem>
         <NavigationMenuItem>

@@ -3,124 +3,121 @@ import { ProductSchema, type Product } from "./schemas";
 // Sample products data - types are automatically inferred
 export const sampleProducts = [
   {
-    id: "1",
-    name: "Premium Wireless Headphones",
-    price: 299.99,
-    originalPrice: 399.99,
-    image: "https://images.pexels.com/photos/1464625/pexels-photo-1464625.jpeg",
+    id: "tshirt-1",
+    name: "Classic White T-Shirt",
+    price: 25.0,
+    image: "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=800&auto=format&fit=crop",
     rating: 4.8,
     reviews: 124,
-    category: "audio",
-    badge: "Best Seller",
-    description:
-      "Experience exceptional sound quality with our premium wireless headphones. Featuring advanced noise cancellation, 30-hour battery life, and premium materials for ultimate comfort.",
-    images: [
-      "/placeholder.svg?height=600&width=600",
-      "/placeholder.svg?height=600&width=600",
-      "/placeholder.svg?height=600&width=600",
-      "/placeholder.svg?height=600&width=600"
-    ],
-    colors: [
-      { name: "Black", value: "#000000" },
-      { name: "White", value: "#FFFFFF" },
-      { name: "Silver", value: "#C0C0C0" },
-      { name: "Rose Gold", value: "#E8B4B8" }
-    ],
-    sizes: ["One Size"],
-    features: [
-      "Active Noise Cancellation",
-      "30-hour battery life",
-      "Premium leather ear cups",
-      "Wireless charging case",
-      "Hi-Res Audio certified"
-    ]
+    category: "tshirts",
+    badge: "Essential"
   },
   {
-    id: "2",
-    name: "Smart Fitness Watch",
-    price: 199.99,
-    image: "https://images.pexels.com/photos/22434765/pexels-photo-22434765.jpeg",
+    id: "tshirt-2",
+    name: "Navy Blue Cotton Tee",
+    price: 28.0,
+    image: "https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=800&auto=format&fit=crop",
     rating: 4.6,
     reviews: 89,
-    category: "wearables",
-    badge: "New"
+    category: "tshirts"
   },
   {
-    id: "3",
-    name: "Minimalist Backpack",
-    price: 89.99,
-    originalPrice: 119.99,
-    image: "https://burst.shopifycdn.com/photos/bright-purple-t-shirt.jpg",
+    id: "handbag-1",
+    name: "Leather Tote Bag",
+    price: 150.0,
+    image: "https://images.unsplash.com/photo-1584917865442-de89df76afd3?q=80&w=800&auto=format&fit=crop",
     rating: 4.9,
     reviews: 156,
-    category: "accessories"
+    category: "handbags",
+    badge: "Premium"
   },
   {
-    id: "4",
-    name: "Wireless Charging Pad",
-    price: 49.99,
-    image:
-      "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?q=80&w=736&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    rating: 4.5,
-    reviews: 67,
-    category: "accessories"
-  },
-  {
-    id: "5",
-    name: "Bluetooth Speaker",
-    price: 129.99,
-    image:
-      "https://images.unsplash.com/photo-1623998021446-45cd9b269056?q=80&w=1179&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    id: "handbag-2",
+    name: "Quilted Crossbody Bag",
+    price: 120.0,
+    image: "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?q=80&w=800&auto=format&fit=crop",
     rating: 4.7,
     reviews: 203,
-    category: "audio",
-    badge: "Popular"
+    category: "handbags"
   },
   {
-    id: "6",
-    name: "USB-C Hub",
-    price: 79.99,
-    originalPrice: 99.99,
-    image:
-      "https://images.unsplash.com/photo-1511499767150-a48a237f0083?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    rating: 4.4,
-    reviews: 45,
-    category: "accessories"
+    id: "cap-1",
+    name: "Baseball Cap",
+    price: 25.0,
+    image: "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?q=80&w=800&auto=format&fit=crop",
+    rating: 4.5,
+    reviews: 67,
+    category: "caps"
   },
   {
-    id: "7",
-    name: "USB-C Hub",
-    price: 79.99,
-    originalPrice: 99.99,
-    image:
-      "https://plus.unsplash.com/premium_photo-1676914336000-f8b2f9edd56a?q=80&w=784&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    id: "cap-2",
+    name: "Wool Beanie",
+    price: 30.0,
+    image: "https://images.unsplash.com/photo-1576871337622-98d48d06c9fe?q=80&w=800&auto=format&fit=crop",
     rating: 4.4,
     reviews: 45,
-    category: "accessories"
+    category: "caps",
+    badge: "Winter"
   },
   {
-    id: "8",
-    name: "USB-C Hub",
-    price: 79.99,
-    originalPrice: 99.99,
-    image:
-      "https://plus.unsplash.com/premium_photo-1680859126131-d91874d9f5e8?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    rating: 4.4,
-    reviews: 45,
-    category: "accessories"
+    id: "shoes-1",
+    name: "Sleek Running Shoes",
+    price: 110.0,
+    image: "https://images.unsplash.com/photo-1542291026-7eec264c27ff?q=80&w=800&auto=format&fit=crop",
+    rating: 4.8,
+    reviews: 312,
+    category: "shoes",
+    badge: "Performance"
   },
   {
-    id: "9",
-    name: "USB-C Hub",
-    price: 79.99,
-    originalPrice: 99.99,
-    image:
-      "https://plus.unsplash.com/premium_photo-1681711647066-ef84575c0d95?q=80&w=700&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-    rating: 4.4,
-    reviews: 45,
-    category: "accessories"
+    id: "shoes-2",
+    name: "Leather Loafers",
+    price: 140.0,
+    image: "https://images.unsplash.com/photo-1533867617858-e7b97e060509?q=80&w=800&auto=format&fit=crop",
+    rating: 4.6,
+    reviews: 128,
+    category: "shoes"
+  },
+  {
+    id: "watch-1",
+    name: "Luxury Chronograph",
+    price: 450.0,
+    image: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=800&auto=format&fit=crop",
+    rating: 4.9,
+    reviews: 54,
+    category: "watches",
+    badge: "Luxury"
+  },
+  {
+    id: "watch-2",
+    name: "Minimalist Analog Watch",
+    price: 180.0,
+    image: "https://images.unsplash.com/photo-1508685096489-7aac29a23fce?q=80&w=800&auto=format&fit=crop",
+    rating: 4.7,
+    reviews: 92,
+    category: "watches"
+  },
+  {
+    id: "sunglasses-1",
+    name: "Classic Aviator Sunglasses",
+    price: 120.0,
+    image: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?q=80&w=800&auto=format&fit=crop",
+    rating: 4.8,
+    reviews: 175,
+    category: "sunglasses",
+    badge: "Classic"
+  },
+  {
+    id: "sunglasses-2",
+    name: "Wayfarer Style Frames",
+    price: 95.0,
+    image: "https://images.unsplash.com/photo-1511499767150-a48a237f0083?q=80&w=800&auto=format&fit=crop",
+    rating: 4.5,
+    reviews: 210,
+    category: "sunglasses"
   }
 ] as const;
+
 
 // Validate and export products with proper typing
 export const products: Product[] = sampleProducts.map((product) => ProductSchema.parse(product));
@@ -128,34 +125,34 @@ export const products: Product[] = sampleProducts.map((product) => ProductSchema
 // Categories data with inferred types
 export const categories = [
   {
-    name: "Audio",
-    href: "/products?category=audio",
-    count: "120+ products"
+    name: "T-shirts",
+    href: "/products?category=tshirts",
+    count: "50+ items"
   },
   {
-    name: "Wearables",
-    href: "/products?category=wearables",
-    count: "85+ products"
+    name: "Hand bags",
+    href: "/products?category=handbags",
+    count: "40+ items"
   },
   {
-    name: "Accessories",
-    href: "/products?category=accessories",
-    count: "200+ products"
+    name: "Caps",
+    href: "/products?category=caps",
+    count: "30+ items"
   },
   {
-    name: "Mobile",
-    href: "/products?category=mobile",
-    count: "95+ products"
+    name: "Shoes",
+    href: "/products?category=shoes",
+    count: "60+ items"
   },
   {
-    name: "Photography",
-    href: "/products?category=photography",
-    count: "60+ products"
+    name: "Watches",
+    href: "/products?category=watches",
+    count: "25+ items"
   },
   {
-    name: "Gaming",
-    href: "/products?category=gaming",
-    count: "150+ products"
+    name: "Sun glasses",
+    href: "/products?category=sunglasses",
+    count: "35+ items"
   }
 ] as const;
 

@@ -1,15 +1,16 @@
 import Link from "next/link";
-import { Headphones, Watch, Backpack, Smartphone, Camera, Gamepad2 } from "lucide-react";
+import { Shirt, ShoppingBag, GraduationCap, Footprints, Watch, Sun } from "lucide-react";
 import { categories } from "@/lib/data";
 
 const categoryIcons = {
-  Audio: Headphones,
-  Wearables: Watch,
-  Accessories: Backpack,
-  Mobile: Smartphone,
-  Photography: Camera,
-  Gaming: Gamepad2
+  "T-shirts": Shirt,
+  "Hand bags": ShoppingBag,
+  Caps: GraduationCap,
+  Shoes: Footprints,
+  Watches: Watch,
+  "Sun glasses": Sun
 } as const;
+
 
 export default function Categories() {
   return (
